@@ -40,3 +40,8 @@ console.log(greet("remon"));
 // লিখতে হয় backtick (` `) দিয়ে
 // ${ } এর মধ্যে ভেরিয়েবল/এক্সপ্রেশন/ফাংশন রাখা যায়
 // Multi-line লেখা যায়
+
+const x = 50;
+const y = 60;
+const maths = `the sum of ${x} and ${y} is ${x+y}`
+console.log(maths);
