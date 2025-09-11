@@ -21,3 +21,29 @@ function add(num1 , num2) {
  console.log(nijerName);
  
 //  **Default parameter মানে হলো – যদি কোনো ফাংশন কল করার সময় argument না দাও, তবে একটি ডিফল্ট মান আগে থেকেই সেট করা থাকবে।
+
+// Array Default Parameter==========
+function printItems(items = []) {
+  if (items.length === 0) {
+    console.log("No items found!");
+  } else {
+    console.log("Items:", items);
+  }
+}
+
+printItems();                // No items found!  (কারণ default [] নেয়)
+printItems(["Apple", "Mango"]); // Items: [ 'Apple', 'Mango' ]
+
+
+// এখানে যদি কিছু না পাঠাই, items ডিফল্টভাবে খালি array [] হবে।
+
+// Object Default Parameter=====
+function createUser(user = { name: "Guest", age: 18 }) {
+  console.log(`Name: ${user.name}, Age: ${user.age}`);
+}
+
+createUser();                        // Name: Guest, Age: 18
+createUser({ name: "Remon", age: 22 }); // Name: Remon, Age: 22
+
+
+// এখানে যদি object না পাঠানো হয়, তাহলে { name: "Guest", age: 18 } ডিফল্ট মান হিসেবে কাজ করবে।
